@@ -1,4 +1,4 @@
-package com.globomart.productcatalogue;
+package org.rash.productcatalogue;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

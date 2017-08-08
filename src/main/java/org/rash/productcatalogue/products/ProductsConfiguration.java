@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.products;
+package org.rash.productcatalogue.products;
 
 import java.util.logging.Logger;
 
@@ -21,8 +21,8 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
  */
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.globomart.productcatalogue.products")
-@EnableJpaRepositories("com.globomart.productcatalogue.products")
+@ComponentScan("org.rash.productcatalogue.products")
+@EnableJpaRepositories("org.rash.productcatalogue.products")
 @PropertySource("classpath:db-config.properties")
 public class ProductsConfiguration {
 

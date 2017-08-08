@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.services.pricing;
+package org.rash.productcatalogue.services.pricing;
 
-import com.globomart.productcatalogue.pricing.PricingController;
-import com.globomart.productcatalogue.pricing.PricingService;
+import org.rash.productcatalogue.pricing.PricingController;
+import org.rash.productcatalogue.pricing.PricingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;

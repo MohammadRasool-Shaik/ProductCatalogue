@@ -1,45 +1,35 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.products;
+package org.rash.productcatalogue.pricing;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 /**
  * @author Rasool.Shaik
  *
  */
-@Entity
-@Table(name = "product")
-public class Product implements Serializable {
+@JsonRootName("Product")
+public class ProductDTO implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -7335576478725557679L;
 
-	@Id
-	@GeneratedValue
 	private Integer productId;
 
-	@Column(name = "pname", nullable = false, length = 50)
 	private String productName;
 
-	@Column(nullable = false, length = 10)
 	private String productType;
 
-	@Column(nullable = false, scale = 2)
 	private Double productPrice;
 
 	/**
 	 * 
 	 */
-	public Product() {
+	public ProductDTO() {
 		super();
 	}
 
@@ -48,7 +38,7 @@ public class Product implements Serializable {
 	 * @param productType
 	 * @param productPrice
 	 */
-	public Product(String productName, String productType, Double productPrice) {
+	public ProductDTO(String productName, String productType, Double productPrice) {
 		super();
 		this.productName = productName;
 		this.productType = productType;

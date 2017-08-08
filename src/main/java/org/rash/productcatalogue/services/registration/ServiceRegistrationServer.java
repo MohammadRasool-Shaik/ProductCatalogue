@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.services.registration;
+package org.rash.productcatalogue.services.registration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

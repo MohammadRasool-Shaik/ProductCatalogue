@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.products;
+package org.rash.productcatalogue.products;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.globomart.productcatalogue.exceptions.ProductNotFoundException;
+import org.rash.productcatalogue.exceptions.ProductNotFoundException;
 
 /**
  * @author Rasool.Shaik

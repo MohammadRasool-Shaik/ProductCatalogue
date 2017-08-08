@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.exceptions;
+package org.rash.productcatalogue.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.pricing;
+package org.rash.productcatalogue.pricing;
 
 import java.util.List;
 import java.util.logging.Logger;
