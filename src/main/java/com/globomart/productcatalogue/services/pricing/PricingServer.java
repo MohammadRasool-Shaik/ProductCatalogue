@@ -3,6 +3,8 @@
  */
 package com.globomart.productcatalogue.services.pricing;
 
+import com.globomart.productcatalogue.pricing.PricingController;
+import com.globomart.productcatalogue.pricing.PricingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;

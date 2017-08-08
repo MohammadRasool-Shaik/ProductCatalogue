@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.services.pricing;
+package com.globomart.productcatalogue.pricing;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -33,18 +33,19 @@ public class PricingController {
 	}
 
 	@RequestMapping(value = "/{productId}", method = RequestMethod.GET)
-	public @ResponseBody Product findByProductId(@PathVariable String productId) {
+	public @ResponseBody
+	ProductDTO findByProductId(@PathVariable String productId) {
 
 		logger.info("web-service findByProductId() invoked: " + productId);
 
-		Product product = pricingService.findByProductId(productId);
+		ProductDTO product = pricingService.findByProductId(productId);
 		logger.info("web-service findByProductId() found: " + product);
 		return product;
 	}
 
 	@RequestMapping(method = RequestMethod.GET, params = { "lowPrice", "highPrice" })
-	public @ResponseBody List<Product> fetchByProductPrice(@RequestParam Double lowPrice, @RequestParam Double highPrice) {
-		List<Product> products = pricingService.fetchByProductPrice(lowPrice, highPrice);
+	public @ResponseBody List<ProductDTO> fetchByProductPrice(@RequestParam Double lowPrice, @RequestParam Double highPrice) {
+		List<ProductDTO> products = pricingService.fetchByProductPrice(lowPrice, highPrice);
 		return products;
 	}
 

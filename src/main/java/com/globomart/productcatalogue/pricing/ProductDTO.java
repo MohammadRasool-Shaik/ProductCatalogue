@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.services.pricing;
+package com.globomart.productcatalogue.pricing;
 
 import java.io.Serializable;
 
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonRootName;
  *
  */
 @JsonRootName("Product")
-public class Product implements Serializable {
+public class ProductDTO implements Serializable {
 	/**
 	 * 
 	 */
@@ -29,7 +29,7 @@ public class Product implements Serializable {
 	/**
 	 * 
 	 */
-	public Product() {
+	public ProductDTO() {
 		super();
 	}
 
@@ -38,7 +38,7 @@ public class Product implements Serializable {
 	 * @param productType
 	 * @param productPrice
 	 */
-	public Product(String productName, String productType, Double productPrice) {
+	public ProductDTO(String productName, String productType, Double productPrice) {
 		super();
 		this.productName = productName;
 		this.productType = productType;

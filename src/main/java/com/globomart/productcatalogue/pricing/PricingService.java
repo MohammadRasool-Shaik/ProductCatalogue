@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.globomart.productcatalogue.services.pricing;
+package com.globomart.productcatalogue.pricing;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,16 +31,16 @@ public class PricingService {
 		this.serviceUrl = serviceUrl.startsWith("http") ? serviceUrl : "http://" + serviceUrl;
 	}
 
-	public Product findByProductId(String productId) {
+	public ProductDTO findByProductId(String productId) {
 
 		logger.info("findByProductId() invoked: for " + productId);
-		return restTemplate.getForObject(serviceUrl + "/products/{productId}", Product.class, productId);
+		return restTemplate.getForObject(serviceUrl + "/products/{productId}", ProductDTO.class, productId);
 	}
 
-	public List<Product> fetchByProductPrice(Double lowPrice, Double highPrice) {
-		Product[] products = null;
+	public List<ProductDTO> fetchByProductPrice(Double lowPrice, Double highPrice) {
+		ProductDTO[] products = null;
 		try {
-			products = restTemplate.getForObject(serviceUrl + "/products?lowPrice={lowPrice}&highPrice={highPrice}", Product[].class, lowPrice, highPrice);
+			products = restTemplate.getForObject(serviceUrl + "/products?lowPrice={lowPrice}&highPrice={highPrice}", ProductDTO[].class, lowPrice, highPrice);
 		} catch (HttpClientErrorException e) { // 404
 			// Nothing found
 		}
